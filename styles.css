@@ -1,1 +1,65 @@
 /*  your css code here. If applicable */
+body{
+	font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2{
+	margin-bottom:30px;
+}
+
+.toggle-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.toggle-container div{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Toggle styling */
+label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+/* When checked */
+input[type="checkbox"]:checked + label {
+  background-color: purple;
+}
+
+input[type="checkbox"]:checked + label::after {
+  transform: translateX(30px);
+}
+
+span {
+  font-size: 18px;
+  font-weight: 500;
+}
